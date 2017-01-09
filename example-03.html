@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>条件判断</title>
+</head>
+<body>
+  <div id="app">
+    <h1>等待1秒后会显示</h1>
+    <h2 v-if="a == true">默认隐藏，设置true就显示了</h2>
+  </div>
+<script src="http://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+<script>
+var app = new Vue({
+  el:"#app",
+  data:{
+    a:false
+  }
+})
+window.setTimeout(function(){
+  app.a = true;
+},1000)
+</script>
+</body>
+</html>

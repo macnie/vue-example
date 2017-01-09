@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>循环</title>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="item in items">{{item.title}}</li>
+    </ul>
+  </div>
+<script src="http://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+<script>
+var app = new Vue({
+  el:"#app",
+  data:{
+    items:[
+      {title:'标题1'},
+      {title:'标题2'},
+      {title:'标题3'},
+      {title:'标题4'}
+    ]
+  }
+})
+window.setTimeout(function(){
+  app.items.push({title:"追加的标题5"})
+},1000)
+</script>
+</body>
+</html>

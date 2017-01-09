@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>互动</title>
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h1>{{message}}</h1>
+      <span class="btn btn-primary" v-on:click="btnClick">点击按钮转换文字</span>
+    </div>
+  </div>
+<script src="http://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+<script>
+var app = new Vue({
+  el:"#app",
+  data:{
+    message:"123456789"
+  },
+  methods:{
+    btnClick:function(){
+      this.message = this.message.split('').reverse().join('');
+    }
+  }
+})
+</script>
+</body>
+</html>

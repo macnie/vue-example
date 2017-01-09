@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>钟表</title>
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h1>{{h}} : {{m}} : {{s}}</h1>
+    </div>
+  </div>
+<script src="http://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+<script>
+
+var app = new Vue({
+  el:"#app",
+  data:{
+    h:"00",
+    m:"00",
+    s:"00"
+  }
+})
+function clock(){
+  var now = new Date();
+  app.s = now.getSeconds();
+  app.m = now.getMinutes();
+  app.h = now.getHours();
+}
+clock()
+window.setInterval(clock,1000)
+</script>
+</body>
+</html>

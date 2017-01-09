@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>指令绑定</title>
+</head>
+<body>
+  <div id="app">
+    <h1 v-bind:title="title">鼠标放到此行，会出现title信息</h1>
+  </div>
+<script src="http://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+<script>
+var app = new Vue({
+  el:"#app",
+  data:{
+    title:"Hello,World!"
+  }
+})
+</script>
+</body>
+</html>
